@@ -1,0 +1,9 @@
+res://enemies/enemy.tscn::29a6c610613ee77b7e0b524270310d69::1794250955::res://.godot/exported/133200997/export-c236662bf91a99b4edb6703cae1f6ca1-enemy.scn
+res://items/item.tscn::517e2e827c78a81e043b83d7c4c6f2c7::1794185661::res://.godot/exported/133200997/export-8c6acf5e3b5ac6bfa420282f51fe8d0f-item.scn
+res://levels/level_01.tscn::2c34889ccb087778f3d1f5af6c0e006f::1794259391::res://.godot/exported/133200997/export-c4c54ecad530fec2f43d88be46836b98-level_01.scn
+res://levels/level_02.tscn::69186c71456911e88ef5000d09bdb4b9::1794257068::res://.godot/exported/133200997/export-a970615d582ebd1bf0e5b7e66283dc1a-level_02.scn
+res://levels/level_base.tscn::fad67e04e669576d53edf64191b04081::1794258803::res://.godot/exported/133200997/export-34ee3863321747b630698896f1eb7226-level_base.scn
+res://scenes/main.tscn::c27b64a935c6815e5a1fb94e84d8810f::1794254821::res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
+res://scenes/player.tscn::d3f5e6c5b738667652a37f05deda1f9a::1794248902::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://ui/hud.tscn::a713af13dd056f5a8a9c3e0a567f3b04::1794252731::res://.godot/exported/133200997/export-bab6eb13998c1d76cbb0c1fb3e7dc228-hud.scn
+res://scenes/title.tscn::ddee700c292dd46c07452e1551e921f1::1794255750::res://.godot/exported/133200997/export-1f317455290310368203a73618de45af-title.scn

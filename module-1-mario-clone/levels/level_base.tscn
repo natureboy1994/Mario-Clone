@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bq8v047lad4oj"]
+
+[ext_resource type="Script" uid="uid://c01f8c4so1ks6" path="res://levels/level_base.gd" id="1_da5si"]
+[ext_resource type="Texture2D" uid="uid://bwe1gy6kfwpwi" path="res://assets/Tile-Map.png" id="1_nmr65"]
+[ext_resource type="Texture2D" uid="uid://ckma22tafggvr" path="res://assets/Pizza-slice-icon.png" id="2_vmt1o"]
+[ext_resource type="PackedScene" uid="uid://fv8r7dfuloxd" path="res://scenes/player.tscn" id="4_ep22m"]
+[ext_resource type="PackedScene" uid="uid://cijjh27w6gqd5" path="res://ui/hud.tscn" id="7_jd1fy"]
+
+[sub_resource type="Gradient" id="Gradient_ep22m"]
+offsets = PackedFloat32Array(0.3493976, 1)
+colors = PackedColorArray(0.2820879, 0.22161663, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2sxf0"]
+gradient = SubResource("Gradient_ep22m")
+width = 576
+height = 364
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0.37614843)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_da5si"]
+texture = ExtResource("1_nmr65")
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_nf5no"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 15
+sources/0 = SubResource("TileSetAtlasSource_da5si")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ep22m"]
+resource_name = "Pizza"
+texture = ExtResource("2_vmt1o")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_i16ho"]
+physics_layer_0/collision_layer = 0
+physics_layer_0/collision_mask = 0
+custom_data_layer_0/name = "Pizza"
+custom_data_layer_0/type = 21
+sources/0 = SubResource("TileSetAtlasSource_ep22m")
+
+[node name="LevelBase" type="Node2D" unique_id=1600034901]
+script = ExtResource("1_da5si")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=90225146]
+scale = Vector2(2, 2)
+scroll_scale = Vector2(1.25, 1.25)
+repeat_size = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=949546036]
+position = Vector2(86, -112)
+texture = SubResource("GradientTexture2D_2sxf0")
+
+[node name="World" type="TileMap" parent="." unique_id=1435562878]
+tile_set = SubResource("TileSet_nf5no")
+format = 2
+
+[node name="Items" type="TileMap" parent="." unique_id=2017767780]
+tile_set = SubResource("TileSet_i16ho")
+format = 2
+
+[node name="Player" parent="." unique_id=168048661 instance=ExtResource("4_ep22m")]
+position = Vector2(27, -80)
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=124088266]
+position = Vector2(28, -17)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=843853364]
+
+[node name="HUD" parent="CanvasLayer" unique_id=2089972933 instance=ExtResource("7_jd1fy")]
+
+[connection signal="score_changed" from="." to="CanvasLayer/HUD" method="update_score"]
+[connection signal="died" from="Player" to="." method="_on_player_died"]
+[connection signal="life_changed" from="Player" to="CanvasLayer/HUD" method="update_life"]

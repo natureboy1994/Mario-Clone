@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://fni7gcou2757"]
+
+[ext_resource type="Script" uid="uid://btmnfi4y0aagy" path="res://enemies/enemy.gd" id="1_7frlh"]
+[ext_resource type="Texture2D" uid="uid://bwudfpa3jqew1" path="res://assets/Priest.png" id="2_orwns"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4ssu"]
+size = Vector2(13, 26)
+
+[sub_resource type="Animation" id="Animation_7frlh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_orwns"]
+resource_name = "death"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.45),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a6vjd"]
+_data = {
+&"RESET": SubResource("Animation_7frlh"),
+&"death": SubResource("Animation_orwns")
+}
+
+[node name="Enemy" type="CharacterBody2D" unique_id=2060869985 groups=["enemies"]]
+scale = Vector2(-1, 1)
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_7frlh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1931692477]
+texture = ExtResource("2_orwns")
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1416346138]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_x4ssu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1823277821]
+libraries/ = SubResource("AnimationLibrary_a6vjd")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

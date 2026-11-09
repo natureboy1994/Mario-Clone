@@ -1,0 +1,14 @@
+Parallax2D
+TileMapLayer
+Sprite2D
+AnimationPlayer
+Label
+TextureRect
+Control
+CanvasLayer
+HBoxContainer
+MarginContainer
+CollisionShape2D
+CharacterBody2D
+TileMap
+Marker2D
