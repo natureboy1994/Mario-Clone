@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1794262797
+::res://::1794265024
 export_presets.cfg::TextFile::-1::1794259403::0::1::::<><><>0<>0<><>::
 game_state.gd::GDScript::2171818328875797387::1794258060::0::1::::<>Node<><>0<>0<><>::
 icon.svg::CompressedTexture2D::3950223293477805368::1794157573::1794157577::1::::<><><>0<>0<>0c3c09f233618ebc4a1447047da3b187<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
@@ -8,7 +8,7 @@ title.gd::GDScript::4025276363895201391::1794254874::0::1::::<>Control<><>0<>0<>
 ::res://addons/::1794260567
 ::res://addons/godot-git-plugin/::1794260568
 git_plugin.gdextension::GDExtension::2356064347603272678::1794260567::0::1::::<><><>0<>0<><>::
-::res://addons/godot-git-plugin/lib/::1794262793
+::res://addons/godot-git-plugin/lib/::1794265021
 ::res://assets/::1794259134
 cloud1.png::CompressedTexture2D::9174113472761663559::1794259108::1794259134::1::::<><><>0<>0<>fac649b1ecd4edd6104f076a8ec7ebe9<>res://.godot/imported/cloud1.png-4f161184a440a8127c1fb200d2833bb7.ctex::
 cloud2.png::CompressedTexture2D::5312205158380593026::1794259119::1794259134::1::::<><><>0<>0<>446d32fbb3621a7216ee6940281b3d8b<>res://.godot/imported/cloud2.png-f40dea0f42ba07f2ca47dc8335c3b0de.ctex::
@@ -22,10 +22,6 @@ Tile-Map.png::CompressedTexture2D::3940423420232669104::1794173957::1794173966::
 ::res://enemies/::1794250955
 enemy.gd::GDScript::3745579961849910196::1794250914::0::1::::<>CharacterBody2D<><>0<>0<><>::
 enemy.tscn::PackedScene::378324329233658996::1794250955::0::1::::<><><>0<>0<><>::uid://btmnfi4y0aagy::::res://enemies/enemy.gd<>uid://bwudfpa3jqew1::::res://assets/Priest.png
-::res://godot-git-plugin-v3.3.0/::1794262052
-::res://godot-git-plugin-v3.3.0/addons/::1794262052
-::res://godot-git-plugin-v3.3.0/addons/godot-git-plugin/::1794262052
-::res://godot-git-plugin-v3.3.0/addons/godot-git-plugin/lib/::1794262052
 ::res://items/::1794260124
 item.tscn::PackedScene::6822011744680806921::1794185661::0::1::::<><><>0<>0<><>::uid://c888ehewlfi18::::res://item.gd<>uid://c42rsdtca87lm::::res://assets/Pizza-slice.png
 ::res://levels/::1794259391
@@ -34,8 +30,6 @@ level_02.gd::GDScript::2584295855679845927::1794257068::0::1::::<>Control<><>0<>
 level_02.tscn::PackedScene::3400028732366673920::1794257068::0::1::::<><><>0<>0<><>::uid://bc238fkgm8cxj::::res://levels/level_02.gd<>uid://co28o2ei1p6ov::::res://assets/Lil-Devil-Master-Animation-export.png
 level_base.gd::GDScript::6581598946788868571::1794256671::0::1::::<>Node2D<><>0<>0<><>::
 level_base.tscn::PackedScene::3578887922592147025::1794258803::0::1::::<><><>0<>0<><>::uid://c01f8c4so1ks6::::res://levels/level_base.gd<>uid://bwe1gy6kfwpwi::::res://assets/Tile-Map.png<>uid://ckma22tafggvr::::res://assets/Pizza-slice-icon.png<>uid://fv8r7dfuloxd::::res://scenes/player.tscn<>uid://cijjh27w6gqd5::::res://ui/hud.tscn
-::res://Module-1-Mario-Clone/::1794261412
-::res://Module-1-Mario-Clone/Mario-Clone/::1794261288
 ::res://scenes/::1794258042
 main.gd::GDScript::7066813242628271450::1794254821::0::1::::<>Node<><>0<>0<><>::
 main.tscn::PackedScene::2309018973725660861::1794254821::0::1::::<><><>0<>0<><>::uid://c7xhm8fwio7de::::res://scenes/main.gd
