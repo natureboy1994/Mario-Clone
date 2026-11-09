@@ -101,6 +101,7 @@ size = Vector2(26, 19)
 collision_layer = 2
 collision_mask = 13
 script = ExtResource("1_g2els")
+jump_speed = -420
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1899632529]
 position = Vector2(1, -12)
